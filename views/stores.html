@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% set page = "stores" %}
+{% block content %}
+<div class="container">
+	{% for store in stores %}
+		{{ store.name }} <br />
+	{% endfor %}
+    <form action="#" onsubmit="return addStore(this);">
+    <input type="text" name="store_name">
+    <button type="submit">Add</button>
+    </form>
+</div>
+<script type="text/javascript">
+	function addStore(form) {
+		var store = new Object;
+		store.name = $(form).find("input[name=store_name]").val();
+		console.log("Store:", store);
+		$.ajax("/json/stores/add", {type: "POST", data: store});
+		return false;
+	}
+</script>
+{% endblock %}

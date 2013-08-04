@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Price</title>
+        <link rel='stylesheet' href='/bs/css/bootstrap.css' />
+        <link rel='stylesheet' href='/bs/css/bootstrap-glyphicons.css' />
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <div class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <a class="navbar-brand" href="#">Price</a>
+                <ul class="nav navbar-nav">
+                    <li page="index"><a href="/">You</a></li>
+                    <li page="shop"><a href="#">Shop</a></li>
+                    <li page="products"><a href="#">Products</a></li>
+                    <li page="stores"><a href="/stores">Stores</a></li>
+                </ul>
+            </div>
+        </div>
+
+        {% block content %}
+        Default content
+        {% endblock %}
+
+        <script src="/javascripts/jquery.js"></script>
+        <script src="/bs/js/bootstrap.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("ul.nav > li[page={{ page }}]").addClass("active");
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% set page = "index" %}
+{% block content %}
+<div class="container">
+	<div class="panel">
+		<div class="panel-heading">
+			<h3 class="panel-title">Money</h3>
+		</div>
+
+		You owe: <b>$110.13</b><br />
+		You're owed: <b>$81.10</b><br />
+		
+		<div class="panel-footer"><a href="#">Already paid</a>  it? Or want to <a href="#">pay it now?</a></div>
+	</div>
+
+	<div class="panel info-panel">
+		<div class="panel-heading">
+			<h3 class="panel-title">Spent this week: $142.51</h3>
+	</div>
+		Cool graph goes here
+	</div>
+
+	<div class="panel info-panel">
+		<div class="panel-heading">
+			<h3 class="panel-title">Shops this week: 2</h3>
+		</div>
+		Cool graph goes here
+	</div>
+</div>
+{% endblock %}
